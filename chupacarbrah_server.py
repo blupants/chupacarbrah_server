@@ -17,6 +17,11 @@ if DEBUG:
     cars["51f317ec266e4adb956212201f87ba51"] = {"VIN": "1A2B", "maker": "Generic", "log": []}
 
 
+@application.route('/')
+def base_path():
+    return status_endpoint()
+
+
 @application.route("/api/v1/status")
 def status_endpoint():
     global cars
